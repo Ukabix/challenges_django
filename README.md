@@ -1,2 +1,2 @@
 # django
- django blogging site
+ django challenges demo site
