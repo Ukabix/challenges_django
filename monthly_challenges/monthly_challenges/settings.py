@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # built in^ add yours down
+    'challenges', # django will look for templates in app
 ]
 
 MIDDLEWARE = [
@@ -54,8 +56,10 @@ ROOT_URLCONF = 'monthly_challenges.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [
+            # BASE_DIR / "challenges" / "templates"
+        ],
+        'APP_DIRS': True, #django will look for template folders in app dirs
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',

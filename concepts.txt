@@ -1,0 +1,6 @@
+DTL - django templating language
+create html files tocreate dynamic pages
+standard html + special dtl syntax {{}} => dynamic html page
+pass new arg to  render function as dict, use it in template
+
+== variable interpolation
