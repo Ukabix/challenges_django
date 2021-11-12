@@ -15,19 +15,19 @@ monthly_challenges = {
     "september": "Play chess once a week!",
     "october": "Sleep longer every weekend!",
     "november": "Cut on half coffee every morning!",
-    "december": "Learn JS 1 hour everyday!"
+    "december": None #"Learn JS 1 hour everyday!"
 }
 
 # Create your views here.
 
 
 def index(request):
-    list_items = ""
     months = list(monthly_challenges.keys())
- 
+
     return render(request, "challenges/index.html", {
         "months": months
     })
+
 
 def monthly_challenge_by_number(request, month):
     months = list(monthly_challenges.keys())
@@ -49,7 +49,7 @@ def monthly_challenge(request, month):
             "month_name": month
         })
         # render replaces below
-        # response_data = render_to_string("challenges/challenge.html") #best pracitce to repeat app name here
+        # response_data = render_to_string("challenges/challenge.html") #best pracitce to repeat app name name here
         # return HttpResponse(response_data)
     except:
         return HttpResponseNotFound("<h1>This month is not supported!</h1>")

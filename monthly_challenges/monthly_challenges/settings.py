@@ -57,7 +57,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            # BASE_DIR / "challenges" / "templates"
+            # BASE_DIR / "challenges" / "templates" <- instead it is better to add app to apps, easier to maintan
+            BASE_DIR / "templates"
         ],
         'APP_DIRS': True, #django will look for template folders in app dirs
         'OPTIONS': {
